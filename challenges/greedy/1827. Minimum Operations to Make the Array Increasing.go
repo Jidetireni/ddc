@@ -14,7 +14,6 @@ func MinOperations(nums []int) int {
 }
 
 // idomatic approach
-
 func minOperations(nums []int) int {
 	var ops int
 	for i := 1; i < len(nums); i++ {
