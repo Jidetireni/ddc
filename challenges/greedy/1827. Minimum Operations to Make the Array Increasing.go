@@ -12,3 +12,16 @@ func MinOperations(nums []int) int {
 
 	return operations
 }
+
+// idomatic approach
+
+func minOperations(nums []int) int {
+	var ops int
+	for i := 1; i < len(nums); i++ {
+		if need := nums[i-1] + 1; need > nums[i] {
+			ops += need - nums[i]
+			nums[i] = need
+		}
+	}
+	return ops
+}
